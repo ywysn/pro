@@ -1,0 +1,3 @@
+com\cranberry\chatroom\utils\CommUnitsTest.class
+com\cranberry\chatroom\dao\AccountDaoTest.class
+com\cranberry\chatroom\utils\JDBCUtilsTest.class

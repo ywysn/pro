@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.cranberry.chatroom.utils.CommUnitsTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in com.cranberry.chatroom.utils.CommUnitsTest
+loadProperties(com.cranberry.chatroom.utils.CommUnitsTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<null> but was:<jdbc:mysql://localhost/chatroom_websocket?charset=utf8&useSSL=false&allowPublicKeyRetrieval=true>
+	at com.cranberry.chatroom.utils.CommUnitsTest.loadProperties(CommUnitsTest.java:19)
+
