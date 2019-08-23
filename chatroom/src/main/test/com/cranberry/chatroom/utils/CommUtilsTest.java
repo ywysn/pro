@@ -27,6 +27,7 @@ public class CommUtilsTest {
         user.setPassword("123");
         String jsonStr = CommUtils.object2Json(user);
         System.out.println(jsonStr);
+
     }
 
     @Test

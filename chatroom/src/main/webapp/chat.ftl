@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
-    <title>java7_chatroom</title>
+    <title>chatroom</title>
 
 
     <link rel="stylesheet" href="assets/css/bootstrap.css"/>
@@ -57,7 +57,7 @@
 
     //判断当前浏览器是否支持WebSocket
     if ('WebSocket' in window) {
-        webSocket = new WebSocket('ws://127.0.0.1:8080/websocket?username=' + '${username}');
+        webSocket = new WebSocket('ws://127.0.0.1:8083/websocket?username=' + '${username}');
     } else {
         alert("当前浏览器不支持WebSocket");
     }

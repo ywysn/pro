@@ -12,7 +12,7 @@ public class User {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Integer id){
         this.id = id;
     }
 
@@ -21,6 +21,9 @@ public class User {
     }
 
     public void setUserName(String userName) {
+        if(userName.length() <= 5 || userName.length() >= 15){
+            System.out.println("");
+        }
         this.userName = userName;
     }
 

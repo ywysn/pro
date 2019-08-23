@@ -15,8 +15,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-
-@ServerEndpoint("/websocket")
+@ServerEndpoint("/websocket/{userId}")
 public class WebSocket {
     // 存储所有连接到后端的websocket
     private static CopyOnWriteArraySet<WebSocket> clients =
@@ -29,6 +28,7 @@ public class WebSocket {
     private String userName;
 
     @OnOpen
+    //连接创建
     public void onOpen(Session session) {
         this.session = session;
         // username=' + '${username}
@@ -50,12 +50,13 @@ public class WebSocket {
             webSocket.sendMsg(jsonStr);
         }
     }
-
+    //发生错误
     @OnError
     public void onError(Throwable e) {
         System.err.println("WebSocket连接失败!");
     }
 
+    //传输信息
     @OnMessage
     //群聊:{"msg":"777","type":1}
     //私聊:{"to":"0-","msg":"33333","type":2}
@@ -95,7 +96,7 @@ public class WebSocket {
             }
         }
     }
-
+    //连接关闭
     @OnClose
     public void onClose() {
         // 将客户端聊天实体移除

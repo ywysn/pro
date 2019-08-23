@@ -19,7 +19,7 @@
         if ('WebSocket' in window) {
             console.log("支持webcoket!");
             // 后端websocket地址
-            websocket = new WebSocket("ws://localhost:8083/websocket");
+            websocket = new WebSocket("ws://localhost:8083/chatroom");
         }else {
             alert("浏览器不支持websocket!");
         }
